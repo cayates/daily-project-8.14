@@ -1,12 +1,28 @@
 var momentInTime = require('moment');
+var chalk = require('chalk');
+let currentMomentInTime = momentInTime([2017, 11, 14]).isDST()
 
 
-console.log("It is " + momentInTime().format('dddd LL, LTS') + ".")
-console.log("")
-console.log("")
-console.log("")
-console.log("")
 
+
+console.log("It is " + (chalk.blue(momentInTime().format('dddd LL, LTS'))) + ".")
+console.log("It is the " + (chalk.magenta(momentInTime().dayOfYear() + "th")) + " day of the year.")
+
+let minutes = momentInTime().minutes();
+let hours = momentInTime().hours();
+let seconds = momentInTime().seconds();
+
+console.log("It is " + ((hours*60*60) + (minutes*60) + (seconds)) + " seconds into the day.");
+
+if (currentMomentInTime = true){ // i need to check this because my currentMoment variable is always coming back as true regardless of the time of year
+    console.log("It is during Daylight Savings time.")
+}
+    else {(console.log("It is not during Daylight Savings time."))         
+}
+
+
+console.log("")
+console.log(currentMomentInTime)
 
 
 

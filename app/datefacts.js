@@ -1,3 +1,11 @@
+var momentInTime = require('moment');
+
+
+console.log("It is " + momentInTime().format('dddd LL, LTS') + ".")
+console.log("")
+console.log("")
+console.log("")
+console.log("")
 
 
 
@@ -5,7 +13,18 @@
 
 
 
+// const moment = require('node-moment');
 
+// var nextyear  = moment().add(moment.duration("P1Y"));
+// console.log("Next year will be", nextyear);
+
+
+// //load languages (if required)
+// var moment_fr = require('node-moment/lang/fr');
+// moment_fr(moment);
+
+// var nextyear  = moment().add(moment.duration("P1Y"));
+// console.log("Next year will be", nextyear);
 
 
 
